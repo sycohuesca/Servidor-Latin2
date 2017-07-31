@@ -1,0 +1,80 @@
+<!--
+  Generated template for the ComercioFormPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Fromulario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form [formGroup]="myForm" (ngSubmit)="save()">
+    <ion-list>
+      <ion-item>
+        <ion-label stacked>Nombre <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="nombre" type="text" placeholder="Nombre"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>descripcion <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="descripcion" type="text" placeholder="descripcion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>direccion <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="direccion" type="text" placeholder="direccion"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>telefono <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="telefono" type="text" placeholder="telefono"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>horario <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="horario" type="text" placeholder="horario"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>latitud <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="latitud" type="text" placeholder="latitud"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>longitud <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="longitud" type="text" placeholder="longitud"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label stacked>mapa <span class='as'>*</span>:</ion-label>
+        <ion-input formControlName="mapa" type="text" placeholder="mapa"></ion-input>
+      </ion-item>
+      <ion-item>
+
+      </ion-item>
+
+    </ion-list>
+    <p>* Campos obligatorios</p>
+    <p>Las imagenes que sean de tamaño reducido de alto 250px y ancho 300px, en formato .jpg y con nombre descriptivo.</p>
+    <div padding>
+      <h2>galerias de imagenes</h2>
+      <div padding>
+        <ion-input (change)='subir($event)' type="file"></ion-input>
+        <p>{{estado}}</p>
+
+      </div>
+      <button ion-button type="button" (click)='borrarFotos()'>Borrar Fotos</button>
+      <ion-item>
+        <img *ngFor='let img of galeria' [src]="img" />
+
+      </ion-item>
+    </div>
+    <div padding>
+      <button ion-button block type="submit" [disabled]="!myForm.valid">Guardar</button>
+
+    </div>
+  </form>
+
+</ion-content>
