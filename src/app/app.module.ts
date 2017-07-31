@@ -14,7 +14,6 @@ import { ComercioPageModule } from '../pages/comercio/comercio.module';
 import { ComercioFormPageModule } from '../pages/comercio/comercio-form/comercio-form.module';
 import { ComercioViewPageModule } from '../pages/comercio/comercio-view/comercio-view.module'
 
-
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 

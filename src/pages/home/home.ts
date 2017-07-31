@@ -13,7 +13,6 @@ export class HomePage {
   user: any;
   constructor(public navCtrl: NavController, private afAuth: AngularFireAuth) {
     afAuth.authState.subscribe(user => {
-      console.log(user);
       if (!user) {
         this.user = null;
         return;

@@ -17,17 +17,11 @@
 <ion-content padding>
   <ion-item no-lines>
     <ion-label> Categorias</ion-label>
-    <ion-select #select (ionChange)='onChange(select._value)'>
+    <ion-select #select (ionChange)='onChange(select.value)'>
       <ion-option *ngFor='let cat of categorias' [value]="cat.$key">{{cat.nombre}}</ion-option>
     </ion-select>
 
   </ion-item>
-
-  <!--
-  <select (change)="onChange($event.target.value)">
-    <option disabled>Seleciona una categoria</option>
-        <option *ngFor='let cat of categorias' [value]="cat.$key">{{cat.nombre}}</option>
-      </select>-->
 
   <button ion-button (click)='create()' *ngIf="comercios">Nuevo Comercio</button>
   <ion-searchbar #fas placeholder='Buscar...'></ion-searchbar>
