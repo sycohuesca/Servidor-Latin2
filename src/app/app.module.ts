@@ -12,7 +12,13 @@ import { CategoriaFormPageModule } from '../pages/categoria/categoria-form/categ
 import { CategoriaViewPageModule } from '../pages/categoria/categoria-view/categoria-view.module';
 import { ComercioPageModule } from '../pages/comercio/comercio.module';
 import { ComercioFormPageModule } from '../pages/comercio/comercio-form/comercio-form.module';
-import { ComercioViewPageModule } from '../pages/comercio/comercio-view/comercio-view.module'
+import { ComercioViewPageModule } from '../pages/comercio/comercio-view/comercio-view.module';
+import { VideoPageModule } from '../pages/video/video.module'
+import { VideoFormPageModule } from '../pages/video/video-form/video-form.module'
+import { VideoViewPageModule } from '../pages/video/video-view/video-view.module'
+import { RadioPageModule } from '../pages/radio/radio.module'
+import { RadioFormPageModule } from '../pages/radio/radio-form/radio-form.module'
+import { RadioViewPageModule } from '../pages/radio/radio-view/radio-view.module'
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -43,7 +49,13 @@ export const firebaseConfig = {
     CategoriaViewPageModule,
     ComercioPageModule,
     ComercioViewPageModule,
-    ComercioFormPageModule
+    ComercioFormPageModule,
+    VideoPageModule,
+    VideoFormPageModule,
+    VideoViewPageModule,
+    RadioPageModule,
+    RadioFormPageModule,
+    RadioViewPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [

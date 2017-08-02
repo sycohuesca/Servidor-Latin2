@@ -23,6 +23,8 @@ export class MyApp {
       { title: 'Home', component: 'HomePage' },
       { title: 'Categoria', component: 'CategoriaPage' },
       { title: 'Comercio', component: 'ComercioPage' },
+      { title: 'Videos', component: 'VideoPage' },
+      { title: 'Radios', component: 'RadioPage' },
 
     ];
 

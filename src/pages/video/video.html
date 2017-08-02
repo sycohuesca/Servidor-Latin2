@@ -1,38 +1,41 @@
 <!--
-  Generated template for the CategoriaPage page.
+  Generated template for the VideoPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
+
+
   <ion-navbar>
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Categoria</ion-title>
+    <ion-title>Videos</ion-title>
   </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-  <ion-searchbar #fas placeholder='Buscar...'></ion-searchbar>
   <button ion-button (click)='create()'>Nueva Categoria</button>
 
   <ion-list inset>
-    <ion-item *ngFor="let item of items |async | buscar  : fas.value">
-      {{ item.nombre }}
+
+    <ion-item *ngFor="let com of videos | async ">
+      {{ com.nombre }}
       <ion-buttons end>
-        <button ion-button ion-only (click)='view(item)'>
+        <button ion-button (click)='view(com)'>
         Ver
       </button>
-        <button ion-button ion-only (click)='update(item)'>
+        <button ion-button (click)='update(com)'>
        Editar
       </button>
-        <button ion-button ion-only (click)='delete(item)'>
+        <button ion-button (click)='delete(com)'>
         Borrar
       </button>
       </ion-buttons>
     </ion-item>
   </ion-list>
+
 
 </ion-content>
