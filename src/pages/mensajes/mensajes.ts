@@ -24,15 +24,16 @@ export class MensajesPage {
 
   }
   save() {
-    let url = 'https://api.ionic.io/push/notifications';
-    let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiIxZDc1MzQ3NS0yMGM3LTRmYzYtYjc0Yy0zMTI2OGNmOGIwZGMifQ.lPvgjtc4J_8v69GNUJIonOKBj4TUah4ewg-bw0Jvo6Q' });
+    let url = 'https://fcm.googleapis.com/fcm/send';
+    let headers = new Headers({ 'Content-Type': 'application/json', 'Authorization': 'key=AIzaSyC_ZJC9wmRQm0Lpf1y4w8sKBW2q_vVgF64' });
     let options = new RequestOptions({ headers: headers });
     let cuerpo = {
-      profile: "pruebas",
-      send_to_all: "true",
+      to: "/topics/publi",
       notification: {
         title: this.myForm.value.titulo,
-        message: this.myForm.value.mensaje
+        body: this.myForm.value.mensaje,
+        sound: "default",
+        vibrate: "true"
       }
     };
 

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+
 <head>
   <meta charset="UTF-8">
   <title>Ionic App</title>
@@ -9,6 +10,15 @@
 
   <link rel="icon" type="image/x-icon" href="assets/icon/favicon.ico">
   <link rel="manifest" href="manifest.json">
+  <style type="text/css">
+    img#loading {
+      margin-top: -100px;
+      margin-left: -100px;
+      left: 50%;
+      top: 50%;
+      position: absolute;
+    }
+  </style>
   <meta name="theme-color" content="#4e8ef7">
 
   <!-- cordova.js required for cordova apps -->
@@ -26,10 +36,11 @@
   <link href="build/main.css" rel="stylesheet">
 
 </head>
+
 <body>
 
   <!-- Ionic's root component and where the app will load -->
-  <ion-app></ion-app>
+  <ion-app><img id='loading' src='assets/cargando.gif'></ion-app>
 
   <!-- The polyfills js is generated during the build process -->
   <script src="build/polyfills.js"></script>
@@ -42,4 +53,5 @@
   <script src="build/main.js"></script>
 
 </body>
+
 </html>
