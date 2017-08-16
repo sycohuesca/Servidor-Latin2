@@ -4,6 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireDatabaseModule } from 'angularfire2/database';
 import { AngularFireAuthModule } from 'angularfire2/auth';
+import { HttpModule } from '@angular/http';
 
 import { MyApp } from './app.component';
 import { HomePageModule } from '../pages/home/home.module';
@@ -19,6 +20,7 @@ import { VideoViewPageModule } from '../pages/video/video-view/video-view.module
 import { RadioPageModule } from '../pages/radio/radio.module'
 import { RadioFormPageModule } from '../pages/radio/radio-form/radio-form.module'
 import { RadioViewPageModule } from '../pages/radio/radio-view/radio-view.module'
+import { MensajesPageModule } from "../pages/mensajes/mensajes.module";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -43,6 +45,7 @@ export const firebaseConfig = {
     AngularFireModule.initializeApp(firebaseConfig),
     AngularFireAuthModule,
     AngularFireDatabaseModule,
+    HttpModule,
     HomePageModule,
     CategoriaPageModule,
     CategoriaFormPageModule,
@@ -55,7 +58,8 @@ export const firebaseConfig = {
     VideoViewPageModule,
     RadioPageModule,
     RadioFormPageModule,
-    RadioViewPageModule
+    RadioViewPageModule,
+    MensajesPageModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
