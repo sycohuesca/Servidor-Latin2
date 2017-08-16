@@ -26,6 +26,7 @@ export class MyApp {
       { title: 'Videos', component: 'VideoPage' },
       { title: 'Radios', component: 'RadioPage' },
       { title: 'Mensajes', component: 'MensajesPage' },
+      { title: 'Mapas', component: 'MapasPage' },
 
     ];
 

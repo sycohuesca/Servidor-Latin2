@@ -21,6 +21,7 @@ import { RadioPageModule } from '../pages/radio/radio.module'
 import { RadioFormPageModule } from '../pages/radio/radio-form/radio-form.module'
 import { RadioViewPageModule } from '../pages/radio/radio-view/radio-view.module'
 import { MensajesPageModule } from "../pages/mensajes/mensajes.module";
+import { MapasPageModule } from "../pages/mapas/mapas.module";
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -59,7 +60,8 @@ export const firebaseConfig = {
     RadioPageModule,
     RadioFormPageModule,
     RadioViewPageModule,
-    MensajesPageModule
+    MensajesPageModule,
+    MapasPageModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
